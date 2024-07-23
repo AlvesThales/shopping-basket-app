@@ -1,7 +1,7 @@
 ﻿version: '3.8'
 
 services:
-  shoppingbasket.rest:
+  backend:
     image: shoppingbasket.rest
     build:
       context: ./backend
@@ -31,7 +31,7 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "4200:4200"
+      - "4200:80"
     networks:
       - dev-network
 
