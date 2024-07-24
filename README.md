@@ -17,7 +17,7 @@ docker-compose up -d --build
 
 The docker-compose file will do all the job and start the application at the url http://localhost:4200.
 
-The backend may start before the database is running, so it may be necessary to restart it once.
+The backend may start before the database is running, so it may be necessary to restart only the backend container once.
 
 To stop the application just execute the following command:
 ```shell
@@ -38,15 +38,12 @@ Features included:
 - Logging
 - Code First Migrations
 - SOLID design principles
-- Design patterns (Strategy, Dependency Injection, etc.)
+- Design patterns (Mediator, Strategy, Dependency Injection, etc.)
 
 ##  Improvements
 
-Some points to improve if there was more time, or for a real production scenario:
+Some points to improve:
 - Increase the Unit Tests coverage to be higher than 80%
-- Add integration tests
-- Add caching
-- Add a monitoring tool such as Kibana
-- Parametrize application properties with profiles
-- Use vaults to store sensitive data
-- Use two databases, one for writing, another for reading
+- Automate integration tests with docker and scripts
+- UI for registering products
+- Move Discounts to a database instead of defining them in the backend
